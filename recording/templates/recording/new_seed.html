@@ -1,0 +1,38 @@
+{% extends 'recording/base_model.html' %}
+<!-- New Seed Modal -->
+
+              {% block header %}
+              <h4 class="modal-title">New Seed</h4>
+              {% endblock %}
+        			
+              {% block body %} 
+              <h5>Please fill out the information:</h5>
+              <div>
+                <form id="seed_form" name="seed_form">
+                  <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" placeholder="Title">
+                  </div>
+                  <div class="form-group">
+                    <label for="initiator">Initiator Name</label>
+                    <input type="text" value="anonymous" class="form-control" id="initiator" name="initiator" placeholder="Initiator">
+                  </div>
+                  <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea class="form-control" id="description" name="description" rows="3"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="image">Image</label>
+                    <input type="file" class="form-control-file" id="image" name="image">
+                  </div>
+                </form>
+                <div id="image_empty"></div>
+                <button id="start_seed" type="button" style="" class="btn btn-outline-secondary">Record</button>
+                <button id="stop_seed" type="button" class="btn btn-outline-secondary" disabled>Stop</button>
+              </div>
+              {% endblock %}
+        			
+              {% block fooder %}
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button id="seed_create" type="button" data-loading-text="Creating..." class="btn btn-primary" disabled onclick="create_seed(this);">Create</button>
+              {% endblock %}

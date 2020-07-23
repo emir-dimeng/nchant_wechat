@@ -1,0 +1,29 @@
+{% extends 'recording/base_model.html' %}
+<!-- New Recording Modal -->
+              {% block header %}
+              <h4 class="modal-title">Recording</h4>
+              {% endblock %}
+        			
+              {% block body %} 
+              <h5>Following ... </h5>
+              <form id="rec_form">
+                <div class="form-row">
+                  <div class="form-group col-md-4">
+                    <label for="follow">Seed or Collective voice</label>
+                    <select id="follow" class="form-control">
+                      <option value=1>SEED</option>
+                      <option value=2 selected>COLLECTIVE</option>
+                    </select>
+                  </div>
+                  <div class="form-group col-md-4">
+                    <button id="start_rec" type="button" style="" class="btn btn-outline-secondary">Record</button>
+                    <button id="stop_rec" type="button" class="btn btn-outline-secondary hidden" disabled>Stop</button>
+                  </div>
+                </div>
+              </form>
+              {% endblock %}
+
+              {% block fooder %} 
+              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+              <button id="add" onclick="add(this);" type="button" data-loading-text="Adding..." class="btn btn-primary" disabled>Add</button>
+              {% endblock %}

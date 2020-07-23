@@ -1,0 +1,19 @@
+		<div class="modal-dialog" role="document">
+	    	<div class="modal-content">
+      			<div class="modal-header">
+        			<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        			{% block header %} {% endblock %}
+      			</div>
+      			<div class="modal-body">
+      				{% block body %} {% endblock %}
+      				<div>
+                		<p><strong>Recordings:</strong></p>
+                		<p>Note: Multiple recordings take the last recording.</p>
+    					<ol id="recordingsList"></ol>
+      				</div>
+      			</div>
+    	  		<div class="modal-footer">
+    	  			{% block fooder %} {% endblock %}
+      			</div>
+    		</div>
+  		</div>
